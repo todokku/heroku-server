@@ -1,22 +1,32 @@
 module.exports = {
   development: {
-      client: 'pg',
-      connection: 'postgres://localhost/todosvideo',
-      migrations: {
-          directory: __dirname + '/db/migrations',
-        },
-      seeds: {
-          directory: __dirname + '/db/seeds',
-        },
+    client: "pg",
+    connection:
+      "postgres://localhost/todosvideo",
+    migrations: {
+      directory:
+        __dirname +
+        "/db/migrations/development",
     },
+    seeds: {
+      directory:
+        __dirname +
+        "/db/seeds/development",
+    },
+  },
   production: {
-      client: 'pg',
-      connection: process.env.DATABASE_URL,
-      migrations: {
-          directory: __dirname + '/db/migrations',
-        },
-      seeds: {
-          directory: __dirname + '/db/seeds',
-        },
+    client: "pg",
+    connection:
+      process.env.DATABASE_URL,
+    migrations: {
+      directory:
+        __dirname +
+        "/db/migrations/production",
     },
+    seeds: {
+      directory:
+        __dirname +
+        "/db/seeds/production",
+    },
+  },
 };
